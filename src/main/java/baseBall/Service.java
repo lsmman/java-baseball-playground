@@ -1,19 +1,26 @@
 package baseBall;
 
+import baseBall.Dto.GameResponseDto;
+import baseBall.game.Game;
+import baseBall.game.GameResult;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Service {
     Game game;
 
-    public Service() {
-        this.game = new Game();
-    }
-
     public void initGame(){
-        game.createAnswer();
+        game = new Game();
     }
 
-    public void playGame(List<Integer> balls){
-        game.play(balls);
+    public GameResponseDto playGame(String ballsStr){
+        List<Integer> balls = new ArrayList<>();
+        for (int i = 0; i < ballsStr.length(); i++) {
+            balls.add(ballsStr.charAt(i) - '0');
+        }
+
+        GameResult result = game.play(balls);
+        return new GameResponseDto(result);
     }
 }
