@@ -5,12 +5,13 @@ public class BaseBallGame {
     UI ui;
     Controller controller;
 
-    public BaseBallGame(){
-        ui = new UI();
-        controller = new Controller(ui);
-    }
-
     private void gameStart() {
+        if (ui == null){
+            ui = new UI();
+        }
+        if (controller == null){
+            controller = new Controller(ui);
+        }
         controller.play();
     }
 
