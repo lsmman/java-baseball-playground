@@ -1,4 +1,4 @@
-# TDD를 위한 야구 게임 예제
+# TDD를 위한 숫자 야구 게임 예제
 
 ## CONTENTS
 
@@ -28,10 +28,10 @@
 
 ```
 public method: createAnswer
-    3자리 수 야구게임 정답을 만들어 냅니다.
+    3자리 수 숫자 야구게임 정답을 만들어 냅니다.
 
 public method: play
-    야구 게임에서 몇 개 맞추었는 지 도출해줍니다.
+    숫자 야구 게임에서 몇 개 맞추었는 지 도출해줍니다.
        ex) com / user
        123 / 123 -> 3 strike
        123 / 456 -> Nothing
@@ -83,7 +83,7 @@ public method : isValid
 [Link :link:](/src/main/java/baseBall/Service.java) / [Test :heavy_check_mark:](/src/test/java/baseBall/ServiceTest.java)
 - 게임 수행을 매개하는 서비스 클래스입니다.
 - initGame(): Game을 위한 환경을 셋팅합니다.
-- playGame(): input을 받아 야구 게임 결과를 리턴합니다.
+- playGame(): input을 받아 숫자 야구 게임 결과를 리턴합니다.
 
 ### GameResponseDTO
 
